@@ -8,7 +8,7 @@ node {
      }
 
      stage('Push image') {
-         docker.withRegistry('174323244164.dkr.ecr.ap-northeast-2.amazonaws.com/hoon1', 'ecr:ap-northeast-2:hoon-ecr-credentials') {
+         docker.withRegistry('https://174323244164.dkr.ecr.ap-northeast-2.amazonaws.com/hoon1', 'ecr:ap-northeast-2:hoon-ecr-credentials') {
              app.push("${env.BUILD_NUMBER}")
              app.push("latest")
      }
